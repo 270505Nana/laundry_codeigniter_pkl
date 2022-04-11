@@ -10863,7 +10863,6 @@ a:focus {
 .bg-login-image {
   /* background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800"); */
   background-image: url(../../images/tshirt.png);
-  height: 75px;
   background-position: center;
   background-size: cover;
 }
