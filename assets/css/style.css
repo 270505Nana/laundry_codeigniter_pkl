@@ -18,3 +18,31 @@
     margin-left: 3%;
     margin-right: 3%;
 }
+
+.set-image{
+
+    width:350px;
+    height:350px;
+}
+
+h5{
+
+    color: #a0c6e3;
+    font-weight: bold;
+
+}
+
+/* background untuk footer */
+
+.Footer{
+
+
+    height: 85px;
+    background-color: black;
+
+}
+
+.copyright{
+
+    padding-top: 25px;
+}

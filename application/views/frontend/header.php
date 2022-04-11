@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Laundry Online</title>
   </head>
@@ -40,13 +41,13 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-        <img class="d-block w-100 image-slider" src="<?= base_url()?>assets/images/slider1.png" alt="First slide">
+        <img class="d-block w-100 image-slider" src="<?= base_url()?>assets/images/slider/slider1.png" alt="First slide">
         </div>
         <div class="carousel-item">
-        <img class="d-block w-100 image-slider" src="<?= base_url()?>assets/images/slide2.png" alt="Second slide">
+        <img class="d-block w-100 image-slider" src="<?= base_url()?>assets/images/slider/slide2.png" alt="Second slide">
         </div>
         <div class="carousel-item">
-        <img class="d-block w-100 image-slider" src="<?= base_url()?>assets/images/slide3.png" alt="Third slide">
+        <img class="d-block w-100 image-slider" src="<?= base_url()?>assets/images/slider/slide3.png" alt="Third slide">
         </div>
     </div>
     <a class="carousel-control-prev btn-slider" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -64,5 +65,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="text/javascript">
+      AOS.init({easing: 'ease-in-out-sine'});
+    </script>
   </body>
 </html>
