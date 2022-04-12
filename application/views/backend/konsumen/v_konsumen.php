@@ -50,8 +50,8 @@
                                 <td><?= $row->nama_konsumen;?></td>
                                 <td><?= $row->alamat_konsumen;?></td>
                                 <td><?= $row->no_telepon;?></td>
-                                <td><a href="" class="btn btn-success ">Edit</a>
-                                    <a href="" class="btn btn-danger ml-2">Hapus</a>
+                                <td><a href="<?= base_url()?>konsumen/edit/<?= $row-> kode_konsumen;?>" class="btn btn-success ">Edit</a>
+                                    <a href="<?= base_url()?>konsumen/delete/<?= $row-> kode_konsumen;?>" class="btn btn-danger ml-2" onclick="return confirm('Hapus Data?')">Hapus</a>
                                 </td>
                             </tr>
                         <?php }
