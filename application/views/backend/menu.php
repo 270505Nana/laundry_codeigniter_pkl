@@ -44,11 +44,12 @@
                        <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url()?>konsumen">
+                <!-- Konsumen : controller -->
                     <span>Data Konsumen</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="<?= base_url()?>paket">
                     <span>Data Paket</span></a>
             </li>
 
