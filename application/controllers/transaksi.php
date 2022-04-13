@@ -91,6 +91,23 @@ class Transaksi extends CI_Controller{
             redirect('transaksi/riwayat', 'refresh');
         }
     }
+
+    // public function detail($kode_transaksi){
+
+    //     $this->load->library('dompdf_gen');
+    //     $isi['transaksi'] = $this->m_transaksi->detail($kode_transaksi);
+        
+    //     $this->load->view('backend/transaksi/detail', $isi);
+
+    //     $paper_size ='A5';
+    //     $orientation = 'landscape';
+    //     $html = $this->output->get_output();
+    //     $this->dompdf->set_paper($paper_size, $orientation);
+
+    //     $this->dompdf->load_html($html);
+    //     $this->dompdf->render();
+    //     $this->dompdf->stream("Detail Transaksi", array('Attachment' =>0));
+    // }
 }
 
 ?>

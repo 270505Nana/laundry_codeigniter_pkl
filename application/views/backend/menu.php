@@ -18,7 +18,7 @@
         <ul class="navbar-nav bg_menu bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url()?>dashboard">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -36,7 +36,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="<?= base_url()?>dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -45,26 +45,31 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url()?>konsumen">
                 <!-- Konsumen : controller -->
-                    <span>Data Konsumen</span></a>
+                <i class="fas fa-users fa-2x text-gray-300"></i>
+                <span>Data Konsumen</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url()?>paket">
-                    <span>Data Paket</span></a>
+                <i class="fas fa-box fa-2x text-gray-300"></i>
+                <span>Data Paket</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url()?>transaksi/tambah">
+                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                     <span>Tambah Transaksi</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url()?>transaksi/riwayat">
+                <i class="fas fa-history -sign fa-2x text-gray-300"></i>
                     <span>Riwayat Transaksi</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
+                <i class="fas fa-file-alt -sign fa-2x text-gray-300"></i>
                     <span>Laporan</span></a>
             </li>
             <!-- Divider -->

@@ -30,19 +30,6 @@
                 <tbody>
 
                 
-    <?php
-        if(!empty($this->session->flashdata('info'))){?>
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Selamat</strong> <?= $this->session->flashdata('info')?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-
-        <?php }
-    ?>
-
-    <div class=
                    <?php
                    $no=1;
                    foreach($data as $row) {?>
@@ -58,8 +45,8 @@
                         <td><?= $row->bayar;?></td>
                         <td><?= $row->status;?></td>
                         <td>
-                            <a href="" class="btn btn-warning ">Detail</a>
-                            <a href="<?= base_url()?>transaksi/edit_transaksi/<?= $row->kode_transaksi;?>" class="btn btn-success">Edit</a>
+                            <!-- <a href="<?= base_url()?>transaksi/detail/<?= $row-> kode_transaksi;?>" class="btn btn-warning ">Detail</a> -->
+                            <a href="<?= base_url()?>transaksi/edit_transaksi/<?= $row-> kode_transaksi;?>" class="btn btn-success">Edit</a>
                         </td>
                     </tr>
 
