@@ -34,21 +34,25 @@
         <h1 class="h3 mb-2 text-gray-800"><?= $judul;?></h1>
         <div class="card shadow mb-4">
             <div class="card-body">
-                <form method="post"action="<?= base_url()?>transaksi/simpan">
+                <form method="post"action="<?= base_url()?>transaksi/update">
                 
                 <div class="form-group">
-                    <input type="text" name="kode_transaksi" value="<?= $kode_transaksi;?>"  class="form-control" >
+                    <input type="text" name="kode_transaksi" value="<?= $transaksi['kode_transaksi'];?>"  class="form-control" readonly>
                     <!-- kode_transaksi : sesuai dengan yang di controller paket -->
                 </div>
 
                 <div class="form-group">
                     <select name="kode_konsumen" class="form-control" required>
-                        <option value="" selected> - Pilih Konsumen</option>
-
                         <?php
-                        foreach($konsumen as $row) {?>
-                            <option value="<?= $row->kode_konsumen?>"> <?= $row->nama_konsumen;?></option>
-                           <?php } 
+                        foreach ($konsumen as $kons){
+                            if($transaksi['kode_konsumen'] == $kons->kode_konsumen){?>
+                            <option value="<?= $kons->kode_konsumen?>" selected> <?= $kons->nama_konsumen?></option>
+
+                            <?php }else{?>
+                                <option value="<?= $kons->kode_konsumen?>"><?= $kons->nama_konsumen?></option>
+                            <?php }
+                        }
+                        
                         ?>
                     </select>
                     
@@ -57,30 +61,32 @@
 
                 <div class="form-group">
                     <select name="kode_paket" id="paket" class="form-control" required>
-                        <option value="" selected> - Pilih Paket</option>
+                    <?php
+                        foreach ($paket as $pkt){
+                            if($transaksi['kode_paket'] == $pkt->kode_paket){?>
+                            <option value="<?= $pkt->kode_paket?>" selected> <?= $pkt->nama_paket?></option>
 
-                        <?php
-                        foreach($paket as $row) {?>
-                            <option value="<?= $row->kode_paket?>"> <?= $row->nama_paket;?></option>
-                           <?php } 
+                            <?php }else{?>
+                                <option value="<?= $pkt->kode_paket?>"> <?= $pkt->nama_paket?></option>
+                            <?php }
+                        }
+                        
                         ?>
-                        <!-- $paket     : sesuai dengan yang di controller transaksi -->
-                        <!-- kode_paket : diambil dengan nama coloumn yang ada di database/paket -->
                     </select>
                     
                 </div>
 
 
                 <div class="form-group">
-                    <input type="text" id="harga" class="form-control" placeholder="Harga Paket" >
+                    <input type="text" id="harga"class="form-control" value="<?= $transaksi['harga_paket']; ?>"placeholder="Harga Paket" >
                 </div>
 
                 <div class="form-group">
-                    <input type="number" name="berat" id="berat" class="form-control" placeholder="Berat (KG)">
+                    <input type="number" name="berat" id="berat" class="form-control" value="<?= $transaksi['berat'];?>" placeholder="Berat (KG)">
                 </div>
 
                 <div class="form-group">
-                    <input type="number" name="grand_total" id="grand_total" class="form-control" placeholder="Grand Total" readonly>
+                    <input type="number" name="grand_total" id="grand_total" class="form-control"  value="<?= $transaksi['grand_total'];?>" placeholder="Grand Total" readonly>
                 </div>
 
                 <div class="form-group">
@@ -89,9 +95,17 @@
 
                 <div class="form-group">
                    <select name="bayar" class="form-control">
-                       <option value=""> - Pilih Status Bayar - </option>
-                       <option value="Lunas"> Lunas </option>
-                       <option value="Belum Lunas"> Belum Lunas </option>
+
+                        <?php
+                            if($transaksi['bayar'] == "Lunas"){?>
+                                <option value="Lunas" selected> Lunas </option>
+                                <option value="Belum Lunas"> Belum Lunas </option>
+                            <?php }else{?>
+                                <option value="Lunas" > Lunas </option>
+                                <option value="Belum Lunas"selected> Belum Lunas </option>
+                            <?php }
+                        
+                        ?>
                    </select>
                 </div>
 
@@ -100,8 +114,8 @@
                 </div>
 
                 <div class="form-group">
-                <a href="<?= base_url()?>transaksi" class="btn btn-danger">Batal</a>
-                  <button type="submit" class="btn btn-primary">Simpan</button>
+                <a href="<?= base_url()?>transaksi/riwayat" class="btn btn-danger">Batal</a>
+                  <button type="submit" class="btn btn-primary">Update</button>
                 </div>
 
                 </form>

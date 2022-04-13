@@ -26,7 +26,7 @@ class M_transaksi extends CI_Model{
         }
 
         $kodemax  = str_pad($kode,3,"0", STR_PAD_LEFT);
-        $kodejadi = "".$kodemax;
+        $kodejadi = "TR".$kodemax;
         return $kodejadi;
     }
 
@@ -37,6 +37,22 @@ class M_transaksi extends CI_Model{
         $this->db->join('konsumen','transaksi.kode_konsumen = konsumen.kode_konsumen');
         $this->db->join('paket'   ,'transaksi.kode_paket = paket.kode_paket');
         return $this->db->get()->result();
+    }
+
+    public function edit_transaksi($kode_transaksi){
+
+        $this->db->select('*');
+        $this->db->from('transaksi');
+        $this->db->join('konsumen', 'transaksi.kode_konsumen = konsumen.kode_konsumen');
+        $this->db->join('paket', 'transaksi.kode_paket= paket.kode_paket');
+        $this->db->where('kode_transaksi', $kode_transaksi);
+        return $this->db->get()->row_array();
+    }
+
+    public function update($kode_transaksi, $data){
+
+        $this->db->where('kode_transaksi', $kode_transaksi);
+        $this->db->update('transaksi', $data);
     }
 }
 ?>
