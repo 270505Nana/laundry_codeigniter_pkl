@@ -3,7 +3,7 @@
     <?php
         if(!empty($this->session->flashdata('info'))){?>
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Data Berhasil di Simpan!</strong> <?= $this->session->flashdata('info')?>
+            <strong>Selamat</strong> <?= $this->session->flashdata('info')?>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -19,7 +19,7 @@
 
 
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Data Konsumen</h1>
+<h1 class="h3 mb-2 text-gray-800">Data Paket</h1>
 <!-- disesuaikan dengan judul yang di /controller/konsumen -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -38,6 +38,28 @@
                         <th>Aksi</th>
                     </tr>
                 </thead>
+                <tbody>
+                    <?php
+                        $no=1;
+                        foreach($data as $row){?>
+                            <tr>
+                                <td><?= $no++;?></td>
+                                <td><?= $row->kode_paket;?></td>
+                                <!-- kode-paket : nama column sesuai dengan yang sudah dibuat di dalam database -->
+                                <td><?= $row->nama_paket;?></td>
+                                <td><?=  "Rp. ". number_format($row->harga_paket,0,'.','.');?></td>
+                                <td>
+                                    <a href="<?= base_url()?>paket/edit/<?= $row-> kode_paket;?>" class="btn btn-success ">Edit</a>
+                                    <a href="<?= base_url()?>paket/delete/<?= $row-> kode_paket;?>" class="btn btn-danger ml-2" onclick="return confirm('Hapus data?')">Delete</a>
+                                    <!-- base_url : untuk mengarahkan kemana -->
+                                </td>
+                            </tr>
+
+                        <?php }
+                    
+                    ?>
+
+                </tbody>
             </table>
         </div>
     </div>
