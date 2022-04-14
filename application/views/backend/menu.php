@@ -35,10 +35,17 @@
             <!-- SIDE BAR -->
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="<?= base_url()?>dashboard">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-fw fa-tachometer-alt fa-2x text-gray-300"></i>
                     <span>Dashboard</span></a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="<?= base_url()?>slider">
+                <!-- Konsumen : controller -->
+                <i class="fas fa-fw fa-tachometer-alt fa-2x text-gray-300 "></i>
+                <span>Kelola Slider</span></a>
             </li>
 
                        <!-- Nav Item - Charts -->
