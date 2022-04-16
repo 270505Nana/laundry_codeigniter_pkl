@@ -5,9 +5,9 @@
 
 class M_slider extends CI_Model{
     
-    public function tampil_data()
+    public function getSlider()
     {
-         return $this->db->get('tb_barang');
+        return $this->db->get('slider');
         //  dia akan ambil dari database, dengan nama tablenya tb_barang(disesuain sama yang di databasenya)
         
     }
@@ -15,4 +15,6 @@ class M_slider extends CI_Model{
     public function tambah_slider ($data,$table){
         $this->db->insert($table, $data);
     }
+
+    
 }

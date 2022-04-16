@@ -47,20 +47,17 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Navbar slider
+                    <!-- Navbar slider -->
                     <nav class="navbar navbar-expand-lg navbar-light bg-navbar">
-                        <a class="navbar-brand" href="#"><img src="<?= base_url()?>assets/images/tshirt.png" height="40"></i></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                        
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Slider <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="<?= base_url()?>about">About <span class="sr-only">(current)</span></a>
                             </li>
                             </ul>
                         </div>
-                    </nav> -->
+                    </nav>
 
 
                     <!-- Topbar Navbar -->

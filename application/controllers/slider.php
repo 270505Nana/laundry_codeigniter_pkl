@@ -13,6 +13,7 @@ class Slider extends CI_Controller{
 
         $isi['content'] = 'backend/slider/v_slider';
         $isi['judul']   = 'Kelola Slider';
+        $isi['slider']  = $this->m_slider->getSlider();
         $this->load->view('backend/dashboard', $isi);
     }
 
@@ -30,6 +31,7 @@ class Slider extends CI_Controller{
 
         if ($gambar=''){}else{
             // bikin path untuk menentukan penyimpanan gambarnya
+            // jadi nanti file yang diupload otomatis akan tesimpan ke fila slider
             $config ['upload_path'] = 'assets/images/slider';
             //untuk menentukan tipe file yang diijinkan
             $config ['allowed_types'] = 'jpg|jpeg|png|gif';
@@ -54,7 +56,9 @@ class Slider extends CI_Controller{
         $this->m_slider->tambah_slider($data, 'slider');
         redirect('slider');
 
-        // // Perlu mengkonfigurasi untuk upload gambarnya
+        // INI GAGAL !!
+
+        // Perlu mengkonfigurasi untuk upload gambarnya
         // $config['upload_path']   =  'assets/images/slider';
         // $config['allowed_types'] = 'jpg|png|gif|jpeg|webp';
         // $config['max_size']      = '20480';
@@ -78,5 +82,7 @@ class Slider extends CI_Controller{
 
         // }
     }
+
+
 }
 ?>

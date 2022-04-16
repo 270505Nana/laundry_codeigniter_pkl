@@ -41,12 +41,12 @@
                     <span>Dashboard</span></a>
             </li>
 
-            <li class="nav-item ">
-                <a class="nav-link" href="<?= base_url()?>slider">
-                <!-- Konsumen : controller -->
+            <!-- <li class="nav-item ">
+                <a class="nav-link" href="<?= base_url()?>">
+                Konsumen : controller
                 <i class="fas fa-fw fa-tachometer-alt fa-2x text-gray-300 "></i>
                 <span>Kelola Slider</span></a>
-            </li>
+            </li> -->
 
                        <!-- Nav Item - Charts -->
             <li class="nav-item">

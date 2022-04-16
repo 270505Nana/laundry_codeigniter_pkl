@@ -38,20 +38,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                        $no=1;
-                        foreach ($slider as $sld){?>
 
-                            <tr>
-                                <td><?= $no++;?></td>
-                                <td>
-                                    <img src="<?= base_url()?>assets/images/slider/<?= $sld->gambar;?>" alt="">
-                                </td>
-                            </tr>
-                       <?php }
-                    
-                    
-                    ?>
                
                 </tbody>
             </table>

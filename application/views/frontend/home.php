@@ -12,8 +12,10 @@
             <p>Solusi untuk anda yang tidak sempat pergi ke tempat laundry, dan bagi anda yang tidak memiliki waktu untuk mencuci baju</p>
         </div>
     </div>
+       
+    </div>
 
-    <div class="row mb-5"  data-aos="fade-up" data-aos-duration="1000">
+    <div class="row mb-5 ml-4 mr-4"  data-aos="fade-up" data-aos-duration="1000">
         <div class="col-md-12">
             <h5>Jenis Paket</h5>
 
