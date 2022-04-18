@@ -14,7 +14,7 @@ class Paket extends CI_Controller{
     public function index(){
         $isi['content'] ='backend/paket/v_paket.php';
         $isi['judul']   = 'Daftar Data Paket';
-        $isi['data']    = $this->m_paket->getDataPaket();
+        $isi['data'] = $this->m_paket->getDataPaket()->result();
         $this->load->view('backend/dashboard', $isi);
     }
 

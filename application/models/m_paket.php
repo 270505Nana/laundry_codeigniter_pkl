@@ -26,7 +26,7 @@ class M_paket extends CI_Model{
 
     public function getDataPaket(){
 
-        return $this->db->get('paket')->result();
+        return $this->db->get('paket');
     }
 
     public function edit($kode_paket){
